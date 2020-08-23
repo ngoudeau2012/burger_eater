@@ -1,0 +1,84 @@
+<div id="pic-section">
+    <div class="row">
+        <div class="col-12">
+            <div class="jumbotron text-center">
+                <h1 class="jumboText">Fantasy Burger Wish List</h1>
+                <a href="#new-burger-form"><button class="action-btn">Add to Menu</button></a>
+                <a href="#menu"><button class="action-btn">View Menu</button></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <div class="card text-center" id="menu">
+                <div class="card-header">
+                    <h3 class="card-title">Menu</h3>
+                    <h6 class="card-subtitle mb-2 text-muted">Click to Devour</h6>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        {{#each burgerInst}}
+                        {{#unless devoured}}
+                        <li class="list-group-item devour-item">
+                            <button class="devour-btn" data-burgerID="{{id}}" style="width: 100%;">{{burger_name}}</button>
+                        </li>
+                        {{/unless}}
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+            <div class="card text-center" id="devoured-list">
+                <div class="card-header">
+                    <h3 class="card-title">Burgers Devoured</h3>
+                    <h6 class="card-subtitle mb-2 text-muted">Click to Delete</h6>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        {{#each burgerInst}}
+                        {{#if devoured}}
+                        <li class="list-group-item devoured-item" data-burgerID="{{id}}">
+                            <div class="row">
+                                <div class="col">
+                                    <button class="delete-btn" data-burgerID="{{id}}" style="">
+                                        {{burger_name}}
+                                    </button>
+                                </div>
+                            </div>
+                        </li>
+                        {{/if}}
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row add-row">
+        <div class="col-12">
+            <div class="card text-center" id="add-burger-card">
+                <div class="card-header">
+                    <h3 class="card-title">Add Burger to Menu</h3>
+                </div>
+                <div class="card-body">
+                    <div class="text-center" id="new-burger-form">
+                        <textarea type="text" rows="6" class="form-control" placeholder="ex. Impossible Burger" id="input-burger-name"></textarea>
+                        <button class="btn btn-outline-secondary submit-btn" type="button" id="submit-burger-btn">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container text-center" style="padding-top: 15px;">
+        <a class="text-white" href="https://github.com/ngoudeau2012">@ngoudeau2012</a>
+    </div>
+</footer>

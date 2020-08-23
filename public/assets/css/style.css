@@ -1,0 +1,70 @@
+li {
+  padding: 5px;
+  margin: 5px;
+  background: #faebd7;
+}
+
+#pic-section {
+  background-image: url("../images/burgerImg1.jpg");
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+}
+.jumbotron{
+  background: none;
+}
+.form-group {
+  margin-bottom: 5px;
+}
+.devour-btn{
+  padding: 1em;
+  background-color:#a7ff83;
+  border-radius: 12px;
+  border: none;
+}
+.devour-btn:hover{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.delete-btn{
+  padding: 1em;
+  background-color:#f85959;
+  border-radius: 12px;
+  border: none;
+  width: 100%;
+}
+.delete-btn:hover{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+body{
+  /* background-color:#40514e; */
+  font-family: 'Montserrat', sans-serif;
+}
+.jumboText{
+  font-weight: bold;
+  color:#a7ff83;
+}
+.add-row{
+margin-top:1em;
+}
+.submit-btn{
+  margin-top: 1em;
+  border-radius: 12px;
+}
+.action-btn{
+  margin-top: 1em;
+  border-radius: 12px;
+  border: none;
+  background: none;
+  color: #a7ff83;
+  padding: 1em;
+}
+.action-btn:hover{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background: #a7ff83;
+  color: black;
+  padding: 1em;
+}
+.card{
+  background: none;
+}
